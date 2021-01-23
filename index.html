@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <div>
+        <ul id="block">
+
+        </ul>
+    </div>
+
+    <script>
+        function pow(x, y) {
+            let text = '' 
+            for (let i = 1; i <= x; i++) {
+               text +=  `<li>  Строка ${i}  ${y} </li>`
+            }
+            return text
+        }
+        // alert(pow(5,3))
+
+
+
+        let a = prompt('Введите число')
+        while(isNaN(a)) {
+            a = prompt('Некорретные данные. Введите число')
+        }
+
+        let b = prompt('Введите текст')
+        
+        document.getElementById('block').innerHTML = pow(a, b)
+        
+    </script>
+
+</body>
+
+</html>
